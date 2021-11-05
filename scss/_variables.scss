@@ -1,0 +1,55 @@
+$green: #1dbb90;
+$red: #d34272;
+$silver: #474747;
+$white: #fff;   
+
+
+$ptsans: "PTSans";
+$raleway: "Raleway";
+
+
+
+
+// fontFace begin
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+    @font-face {
+      font-family: "#{$font-name}";
+      src: url($file-name + '.eot');
+      src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+      url($file-name + '.woff') format('woff'),
+      url($file-name + '.woff2') format('woff2'),
+      url($file-name + '.ttf')  format('truetype');
+      font-weight: $weight;
+      font-style: $style;
+    }
+}
+// fontFace end
+
+
+@mixin flex($fDir,$jCon,$fWrap,$aItm) {
+    display: flex;
+    @if $fDir != null {
+        flex-direction: $fDir;
+    }  
+    @if $jCon != null {
+        justify-content: $jCon;
+    }
+    @if $fWrap != null {
+        flex-wrap: $fWrap;
+    }  
+    @if $aItm != null {
+        align-items: $aItm;
+    }
+}
+
+
+
+@mixin  text($fFamily,$fSize,$transform,$decoration,$color,$fWeight,$lHeigth){
+    font-family: $fFamily;
+    font-size: $fSize;
+    text-transform: $transform;
+    text-decoration: $decoration;
+    color: $color;
+    font-weight: $fWeight;
+    line-height: $lHeigth;
+}

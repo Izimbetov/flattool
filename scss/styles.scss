@@ -1,0 +1,52 @@
+@import "variables";
+*{
+    &::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;        
+    }
+
+    &::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+
+
+.container{
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+     
+
+@media only screen and (min-width:1024px){
+    .wrapper{
+        max-width: 1250px;
+        border: 1px solid black;
+        margin: 0 auto;
+    }
+
+    .container{
+        max-width: 100%;
+        padding: 0 70px;
+        margin: 0 auto;
+    }
+}
+
+
+
+@include font-face(PTSans,'../fonts/PTSans/PTSans-Regular',400,normal);
+@include font-face(Raleway,'../fonts/Raleway/Raleway-Regular',400,normal);
+@include font-face(RalewayBold,'../fonts/Raleway/Raleway-Bold',800,normal);
+
+
+
+@import "header";
+@import "content";
+@import "footer";

@@ -1,0 +1,8 @@
+.footer{
+    @include flex(row, space-between, wrap, center);
+    min-height: 90px;
+
+    p{
+        @include text($ptsans, 16px, none, none, $silver, 400, null);
+    }
+}

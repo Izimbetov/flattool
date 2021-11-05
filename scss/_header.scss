@@ -1,0 +1,60 @@
+.header-nav{
+    @include flex(row, space-around, wrap, center);
+    width: 100%;
+    min-height: 90px;
+    
+}
+
+
+
+.header-nav-logo{
+    text-align: center;
+    padding: 40px;
+    span:nth-child(1){
+        @include text($raleway, 28px, uppercase, none, $red, 400, null);
+    }
+
+    span:nth-child(2){
+        @include text($raleway, 28px, uppercase, none, $green, 400, null);
+    }
+
+    p{
+        @include text($raleway, 10px, uppercase, none, $silver, 400, null);
+    }  
+}
+
+
+
+.header-nav-contact{
+    padding: 40px 0 40px 0;
+    @include flex(row, center, nowrap, center);
+
+    span{
+        @include text($ptsans, 19px, uppercase, none, $silver, 400, null);
+    }
+
+    img{
+        padding: 0px 15px 0px 15px;
+    }
+}
+
+
+
+.header-nav-contact-num{
+    display: inline-block;
+    @include text($ptsans, 19px, uppercase, none, $red, 400, null);
+}
+
+
+
+@media only screen and (min-width:1024px){
+    .header-nav{
+        @include flex(row, space-between, nowrap, center);
+        width: 100%;
+        min-height: 90px;
+    }
+
+    .header-nav-list{
+        padding-left: 250px;
+    }
+}
